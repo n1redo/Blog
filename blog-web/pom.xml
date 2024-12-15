@@ -9,10 +9,26 @@
         <version>1.0.0</version>
     </parent>
 
-    <artifactId>blog-common</artifactId>
+    <artifactId>blog-web</artifactId>
 
     <description>
-        common通用工具
+        web服务入口
     </description>
+
+    <dependencies>
+
+        <!-- 核心框架 -->
+        <dependency>
+            <groupId>com.nhh.blog</groupId>
+            <artifactId>blog-framework</artifactId>
+        </dependency>
+
+        <!-- MySQL驱动包 -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+
+    </dependencies>
 
 </project>

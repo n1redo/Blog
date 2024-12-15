@@ -11,6 +11,10 @@
 
     <modules>
         <module>blog-common</module>
+        <module>blog-web</module>
+        <module>blog-system</module>
+        <module>blog-framework</module>
+        <module>blog-quartz</module>
     </modules>
 
     <properties>
@@ -18,6 +22,61 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <spring-boot.version>2.5.15</spring-boot.version>
+        <mybatis-plus.version>3.5.9</mybatis-plus.version>
     </properties>
+
+    <!-- 依赖声明 -->
+    <dependencyManagement>
+
+        <dependencies>
+
+            <!-- SpringBoot -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!-- MyBatis-Plus -->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
+
+            <!-- 通用工具 -->
+            <dependency>
+                <groupId>com.nhh.blog</groupId>
+                <artifactId>blog-common</artifactId>
+                <version>${blog.version}</version>
+            </dependency>
+
+            <!-- 系统模块 -->
+            <dependency>
+                <groupId>com.nhh.blog</groupId>
+                <artifactId>blog-system</artifactId>
+                <version>${blog.version}</version>
+            </dependency>
+
+            <!-- 核心框架 -->
+            <dependency>
+                <groupId>com.nhh.blog</groupId>
+                <artifactId>blog-framework</artifactId>
+                <version>${blog.version}</version>
+            </dependency>
+
+            <!-- 定时任务 -->
+            <dependency>
+                <groupId>com.nhh.blog</groupId>
+                <artifactId>blog-quartz</artifactId>
+                <version>${blog.version}</version>
+            </dependency>
+
+        </dependencies>
+
+    </dependencyManagement>
 
 </project>

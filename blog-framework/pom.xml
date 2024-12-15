@@ -9,10 +9,26 @@
         <version>1.0.0</version>
     </parent>
 
-    <artifactId>blog-common</artifactId>
+    <artifactId>blog-framework</artifactId>
 
     <description>
-        common通用工具
+        核心框架
     </description>
+
+    <dependencies>
+
+        <!-- SpringBoot Web容器 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <!-- 系统模块 -->
+        <dependency>
+            <groupId>com.nhh.blog</groupId>
+            <artifactId>blog-system</artifactId>
+        </dependency>
+
+    </dependencies>
 
 </project>
