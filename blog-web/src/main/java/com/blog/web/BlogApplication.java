@@ -11,7 +11,7 @@ import org.springframework.context.annotation.ComponentScan;
  * @author nhh
  */
 @SpringBootApplication
-@MapperScan("com.blog.*.mapper")
+@MapperScan("com.blog.system.mapper")
 @ComponentScan("com.blog.*")
 public class BlogApplication {
     public static void main(String[] args) {
