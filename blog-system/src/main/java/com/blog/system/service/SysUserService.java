@@ -10,5 +10,5 @@ import com.blog.system.domain.entity.SysUser;
  * @author nhh
  */
 public interface SysUserService extends IService<SysUser> {
-
+    SysUser selectUserByUserName(String userName);
 }
